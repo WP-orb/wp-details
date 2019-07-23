@@ -4,7 +4,7 @@ Tags: support, Maintanance, WP, WPorb, Site Information, System Information, Sit
 Donate link: http://wporb.com
 Requires at least: 3.0
 Tested up to: 5.1
-Stable tag: 1.1
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +42,6 @@ BY UPLOADING: Upload and extract the zip file and just drop the contents in the 
 2. Server status  
 3. Current Theme information
 4. Active plugins information
-5. Details button
 
 == Frequently Asked Questions ==
 
@@ -58,9 +57,6 @@ We provide premium support & maintenance for WordPress users. If you need help w
 
 == Changelog ==
 
-= 1.1 =
- * Added "Details" to admin top-bar
- 
 = 1.0 =
  * Initial version released
 
