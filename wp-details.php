@@ -2,10 +2,11 @@
 
 /*
  * Plugin Name: WP details
- * Version: 1.0
+ * Version: 1.1
  * Plugin URI: https://wordpress.org/plugins/wp-details
  * Description: Display system & wordpress information for support and troubleshooting. 
- * Author: WP orb
+ * Tags: support, Maintanance, System Check, Details, WPorb, Information, System, Site Info, System Info, Info, Theme Info, Theme Information, Site Check 
+ * Author: WPorb
  * Author URI: https://wporb.com
  * Requires at least: 4.0        
  * Tested up to: 5.1
@@ -17,8 +18,8 @@
 
 class Bbtech_SI {
 
-    public $version = '1.0';
-    public $db_version = '1.0';
+    public $version = '1.1';
+    public $db_version = '1.1';
     protected static $_instance = null;
 
     public static function instance() {
@@ -135,3 +136,44 @@ function bsi() {
 }
 //bsi instance.
 $bsi = bsi();
+
+ /**
+   * The code that runs during plugin activation.
+   */
+  function activate_bw_dev_info_bar() {
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-bw-dev-info-bar-activator.php';
+    Bw_Dev_Info_Bar_Activator::activate();
+  }
+
+  /**
+   * The code that runs during plugin deactivation.
+   *
+   * @since    1.1
+   */
+  function deactivate_bw_dev_info_bar() {
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-bw-dev-info-bar-deactivator.php';
+    Bw_Dev_Info_Bar_Deactivator::deactivate();
+  }
+
+  register_activation_hook( __FILE__, 'activate_bw_dev_info_bar' );
+  register_deactivation_hook( __FILE__, 'deactivate_bw_dev_info_bar' );
+
+
+  /**
+   * The core plugin class
+   */
+  require plugin_dir_path( __FILE__ ) . 'includes/class-bw-dev-info-bar.php';
+
+  /**
+   * Begins execution of the plugin.
+   *
+   * @since    1.0.0
+   */
+  function run_bw_dev_info_bar() {
+
+    new Bw_Dev_Info_Bar();
+
+  }
+
+  run_bw_dev_info_bar();
+
