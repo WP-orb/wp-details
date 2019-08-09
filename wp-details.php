@@ -5,7 +5,6 @@
  * Version: 1.1
  * Plugin URI: https://wordpress.org/plugins/wp-details
  * Description: Display system & wordpress information for support and troubleshooting. 
- * Tags: support, Maintanance, System Check, Details, WPorb, Information, System, Site Info, System Info, Info, Theme Info, Theme Information, Site Check 
  * Author: WPorb
  * Author URI: https://wporb.com
  * Requires at least: 4.0        
